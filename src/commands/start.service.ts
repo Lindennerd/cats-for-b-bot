@@ -27,6 +27,10 @@ export class StartCommand implements OnModuleInit {
             caption: `Olá! Eu sou o bot feito com todo amor do mundo para o b ${this.emojis.heartlyEyes}! Esse mesmo ai da foto ${this.emojis.fingerPointingUp}! A pessoa mais importante na vida do meu criador, ${this.emojis.sun}o centro de gravidade dele ${this.emojis.sun}: \n\n mantém ele sempre no melhor caminho, ao redor do qual a vida dele gira, que faz o dia amanhecer, a noite anoitecer e o qual,sem ele não é possível haver vida!`,
           },
         );
+        this.botService.bot.telegram.sendMessage(
+          ctx.chat.id,
+          `\n Escreva /gacos para ver fotos de gacos \n Escreva /dias para ver a quantos dias vocês dois estão juntos \n Escreva /amor para saber o quanto meu criador te ama`,
+        );
       });
     } catch (e) {
       this.logger.error(e);
